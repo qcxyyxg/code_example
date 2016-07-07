@@ -1,0 +1,4 @@
+1.统计图可使用baidu ECharts组件
+2.自动完成控件 https://github.com/devbridge/jQuery-Autocomplete
+3.多选下拉框控件 http://wenzhixin.net.cn/p/multiple-select/
+4.nodejs 导出excel插件https://github.com/functionscope/Node-Excel-Export

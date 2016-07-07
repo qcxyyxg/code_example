@@ -40,6 +40,31 @@
             .control-group
               .controls(style="margin-left:100px;")
                 button.btn.btn-default(ng-click="search()") 查询
+	
+	
+	.row-fluid
+
+            .span10(ng-show='records.data.length > 0')
+              .span3(style="margin: 25px 0px")
+                .dataTables_paginate.paging_bootstrap.pagination
+                  span.mg-tb-0.ver-middle.text-info 共 {{records.pageCount}} 页  总计 {{records.totalCount}} 条记录
+              .span7
+                .dataTables_paginate.paging_bootstrap.pagination
+                  ul.pagination.mg-tb-0.ver-middle
+                    li.cur-default(ng-class="{true: 'disabled', false: ''}[records.offset == 1]" ng-click="find(records.offset - 1)")
+                      a(aria-label="Previous") ← 上一页
+                    li(ng-show="isShowFirstLast" ng-class="{true: 'active', false: ''}[records.offset == 1]")
+                      a(ng-click="find(1)") {{1}}
+                    li(ng-show="prevS")
+                      span …
+                    li.cur-default(ng-repeat="page in pageInfor" ng-class="{true: 'active', false: ''}[records.offset == page.index]" )
+                      a(ng-click="find(page.index)") {{page.index}}
+                    li(ng-show="nextS")
+                      span …
+                    li(ng-show="isShowFirstLast" ng-class="{true: 'active', false: ''}[records.offset == records.pageCount]")
+                      a(ng-click="find(records.pageCount)") {{records.pageCount}}
+                    li.cur-default(ng-class="{true: 'disabled', false: ''}[records.offset == records.pageCount]" ng-click="find(records.offset - 1 + 2)")
+                      a(aria-label="Next") 下一页 →
 
 
 

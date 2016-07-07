@@ -1,0 +1,45 @@
+//
+   Created by Administrator on 2016/3/10.
+#tables_page.main_container
+  .row-fluid
+    ul.breadcrumb
+    h4.heading
+      ul.breadcrumb
+        li.active 评教系统
+  .row-fluid
+    .widget.widget-padding.span12
+      .widget-header
+        i.icon-list-alt
+        h5 查询条件
+      .widget-body
+        .widget-forms.clearfix
+          form.form-horizontal
+            .control-group
+              label.control-label 评教得分：
+              .controls
+                label.checkbox.callinfo_search_checkbox
+                  input(type='checkbox', value='0' ng-click='allSel($event)' ng-model="searchObj.selectAll")
+                  |  全部
+                label.checkbox.callinfo_search_checkbox(ng-repeat="obj in starLevel")
+                  input(type='checkbox', value='{{obj.value}}' ng-click="updateSelection($event, obj.value)" ng-model="obj.check")
+                  |  {{obj.name}}
+            .control-group
+              label.control-label 日期：
+              .controls
+                .input-append.date.datepicker.datepicker-basic(style="padding:0;float:none;display:inline" data-date='', b-datepicker data-date-format='yyyy-mm-dd' )
+                  input.span3(size='16', placeholder='请输入开始时间' type='text'  ng-model="searchObj.startDate" ng-change='checkTime(searchObj.startDate, "start")')
+                  span.add-on
+                    i.icon-calendar
+                span &nbsp;&nbsp;----&nbsp;&nbsp
+                .input-append.date.datepicker.datepicker-basic(style="padding:0;margin-left:0;float:none;display:inline" data-date='', b-datepicker data-date-format='yyyy-mm-dd' )
+                  input.span3(size='16', placeholder='请输入结束时间' type='text'  ng-model="searchObj.endDate" ng-change='checkTime(searchObj.endDate, "end")')
+                  span.add-on
+                    i.icon-calendar
+                span.text-danger(ng-show="showTip === false") 请输入完整时间段
+                span.text-danger(ng-show="compare === false") 开始时间不能大于结束时间
+            .control-group
+              .controls(style="margin-left:100px;")
+                button.btn.btn-default(ng-click="search()") 查询
+
+
+

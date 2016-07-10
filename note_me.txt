@@ -2,3 +2,5 @@
 2.自动完成控件 https://github.com/devbridge/jQuery-Autocomplete
 3.多选下拉框控件 http://wenzhixin.net.cn/p/multiple-select/
 4.nodejs 导出excel插件https://github.com/functionscope/Node-Excel-Export
+
+5.轮播图插件 http://www.swiper.com.cn/demo/web/index.html   swiper

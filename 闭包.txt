@@ -1,0 +1,14 @@
+function makeFunc() {
+  var name = "Mozilla";
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc();
+myFunc();
+
+ 闭包是一种特殊的对象。它由两部分构成：函数，以及创建该函数的环境。
+ 环境由闭包创建时在作用域中的任何局部变量组成。
+ 在我们的例子中，myFunc 是一个闭包，由 displayName 函数和闭包创建时存在的 "Mozilla" 字符串形成。

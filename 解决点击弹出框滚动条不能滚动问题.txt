@@ -1,0 +1,20 @@
+.ngdialog-overlay {
+    pointer-events: none;
+}
+
+ ngDialog.openConfirm({
+        template: 'app/main/college_add.html',
+        scope: $scope,
+        plain: false,
+        controller: 'dialogCtrl',
+        width:500,
+        closeByDocument: false, //增加此属性
+      })
+	  
+或者设置
+.ngdialog-overlay {
+    display:none;
+}
+增加父背景颜色{
+	background：rgb(0,0,0,0.4)
+}

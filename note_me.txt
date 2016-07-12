@@ -3,3 +3,5 @@
 3.多选下拉框控件 http://wenzhixin.net.cn/p/multiple-select/
 4.nodejs 导出excel插件https://github.com/functionscope/Node-Excel-Export
 5.ajax请求不能下载文件，需要使用超链接或者window.location = url;
+6.轮播图插件 swiper
+7.angularjs 弹出框ngDialog

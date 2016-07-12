@@ -4,3 +4,5 @@
 4.nodejs 导出excel插件https://github.com/functionscope/Node-Excel-Export
 
 5.轮播图插件 http://www.swiper.com.cn/demo/web/index.html   swiper
+
+6.弹出框插件 ngDialog

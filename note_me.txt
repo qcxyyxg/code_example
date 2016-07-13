@@ -5,3 +5,6 @@
 5.ajax请求不能下载文件，需要使用超链接或者window.location = url;
 6.轮播图插件 swiper
 7.angularjs 弹出框ngDialog
+8.时间控件 http://weareoutman.github.io/clockpicker/  clockpicker/
+9.日期控件 datepicker
+10.友盟 消息推送。第三方登录

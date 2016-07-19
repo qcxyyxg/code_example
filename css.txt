@@ -1,0 +1,6 @@
+css div里面文本文本超过长度是显示...
+div{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}

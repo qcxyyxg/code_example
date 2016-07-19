@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+
+</style>
+</head>
+
+<body>
+
+	<div id="answer">
+		班级1、班级2、班级3、班级4、班级5、班级6
+	</div>
+
+	
+	<script>
+		var text = '班级1、班级2、班级3、班级4、班级5、班级6、班级7、班级8、班级9、班级10、班级11';
+		var contentArr = text.split('、');
+		var j = 0, str = '';
+		if(text != ''){
+			for(var i = 0; i < contentArr.length; i++){
+				if(j == 6){
+				  str = str.substring(0, str.length - 1);
+				  str += '\r\n';
+				  j = 0;
+				}
+				str += contentArr[i] + '、';
+				j++;
+			}
+	    alert(str.substring(0, str.length - 1));
+	    alert(document.getElementById('answer'));
+		document.getElementById('answer').innerText = str.substring(0, str.length - 1);
+	  }
+
+	</script>
+</body>
+</html>

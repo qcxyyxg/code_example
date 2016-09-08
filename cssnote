@@ -1,0 +1,13 @@
+1media查询
+.@media only screen and (max-height: 800px) {/**屏幕高度小于800**/
+  .main-container {
+    height: 570px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-height: 800px) {/**屏幕高度大于800**/
+  .main-container {
+    margin-top: 80px;
+    height: 620px;
+  }
+}

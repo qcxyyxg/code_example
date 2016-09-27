@@ -1,0 +1,57 @@
+IE9的css hack
+
+div {
+
+background-color:red\0;  /* ie 8/9*/
+
+background-color:blue\9\0;  /* ie 9*/
+
+*background-color:green;  /* ie 7*/
+
+_background-color:gray;  /* ie 6*/
+
+}
+
+注意写csshack的顺序，其中：
+
+1.background-color:red\0;IE8和IE9都支持；
+2.background-color:blue\9\0; 仅IE9支持；
+
+(1)区别FF(IE8)与IE6 IE7
+
+backgorund:orange; FF和IE8背景色将为橘黄色
+
+*backgorund:red;   IE6和IE7背景色将为红色
+
+(2)区别FF(IE8)与IE6与IE7
+
+background:orange;   FF和IE8背景色将为橘黄色
+
+*background:red !important;  IE7背景色将为红色
+
+*background:blue;     IE6背景色将为蓝色
+
+(3)区别FF(IE8)与IE6与IE7
+
+background:orange;        FF和IE8背景色将为橘黄色
+
+*background:red;          IE7背景色将为红色
+
+_background:blue;         IE6背景色将为蓝色
+
+(4)区别FF与IE6 IE7 IE8 IE9
+
+color:gray;       FF等非IE浏览器字体色将为灰色
+
+color:red\9;     IE8 IE9字体色将为红色
+
+*color:green;     IE7字体色将为绿色
+
+_color:blue;     IE6字体色将为蓝色
+
+提示:CSS HACK书写顺序:先写FF等非IE浏览器所需样式，其次写IE8/9所需样式，接着是IE7的，再接着才是IE6的！
+
+总结:实际运用中我感觉比较少用到!important ,只要你记住”*”和”_”我想就足够区别于FF(IE8)与IE6与IE7了.
+
+
+

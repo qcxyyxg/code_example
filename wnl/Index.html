@@ -1,0 +1,28 @@
+
+<SCRIPT>
+var InputName
+function document.onclick()
+{ 
+  with(window.event)
+  { if (srcElement.getAttribute("Author")==null)
+    closeLayer();
+  }
+}
+function document.onkeyup() 
+  {
+    if (window.event.keyCode==27){
+   closeLayer();
+  }
+  }
+  function closeLayer()
+  {
+    document.all.iframe1.style.display="none";
+  }
+</SCRIPT>
+<p>
+  <input Author=wy name="StartDate" type="text" id="StartDate" value="请输入开始日期" onclick="document.all.iframe1.style.display='block';InputName='StartDate'">
+</p>
+<p>
+  <input Author=wy name="EndDate" type="text" id="EndDate" value="请输入结束日期" onclick="document.all.iframe1.style.display='block';InputName='EndDate'">
+</p>
+<iframe id="iframe1" name="iframe1" src="WNL.html" height="320" width="450" scrolling="no" frameBorder="0" style="display:none"></iframe>

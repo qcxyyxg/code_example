@@ -4,3 +4,8 @@ div{
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
+css div里面文本文本超过长度不显示
+div{
+   overflow: hidden;
+   white-space: nowrap
+}

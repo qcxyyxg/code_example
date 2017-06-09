@@ -1,0 +1,10 @@
+1. 修改my.ini [mysqld] character-set-server=utf8mb4
+2. 在Connector/J的连接参数中，不要加characterEncoding参数。 不加这个参数时，默认值就时autodetect。
+3. 将已经建好的表也转换成utf8mb4 
+   命令：ALTER TABLE `TABLE_NAME` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; （将TABLE_NAME替换成你的表名）
+4. 将需要使用emoji的字段设置类型为： 
+   命令：ALTER TABLE `TABLE_NAME`MODIFY COLUMN `COLUMN_NAME`  text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+
+http://stackoverflow.com/questions/2108824/mysql-incorrect-string-value-error-when-save-unicode-string-in-django
+http://dev.mysql.com/doc/refman/5.5/en/connector-j-reference-charsets.html

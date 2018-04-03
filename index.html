@@ -1,69 +1,170 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-  <meta content="yes"name="apple-mobile-web-app-capable"/>
-  <meta content="black"name="apple-mobile-web-app-status-bar-style"/>
-  <meta name="format-detection"content="telphone=no"/>
-  <title>绝对定位布局</title>
-  <link rel="stylesheet" href="http://www.w3cplus.com/mcommon/reset.css" media="all">
-  <style> 
-	.header,.footer,.wrap-page{
-	  position:absolute;
-	  left:0;
-	  right:0;
-	}
-	.header,.footer{
-	  height:44px;
-	  background-color: #fff;
-	  text-align: center;
-	  z-index:900;
-	  line-height:44px;
-	}
-	.header{
-	  top: 0;
-	  border-bottom: 1px solid #f00;
-	}
-	.footer{
-	  bottom: 0;
-	  border-top: 1px solid #f00;
-	}
-	.wrap-page{
-	  top: 44px;
-	  bottom: 44px;
-	  overflow-y:auto;
-	  -webkit-overflow-scrolling:touch;
-	}
-	.page{
-	  padding: 10px;
-	}
-	.page p{
-	  margin-bottom: 10px;
-	}
-    </style>
-</head>
-<body>
-  <header class="header">header</header>
-  
-  <div class="wrap-page">
-    <div class="page">
-      <input type="number" />
-      <p>君子曰：学不可以已。</p>
-				<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
-				<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
-				<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
-				<p>君子曰：学不可以已。</p>
-				<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
-				<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
-				<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
-				<p>君子曰：学不可以已。</p>
-				<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
-				<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
-				<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
-    <input type="number" />
+<html><head>
+    <meta charset="utf-8">
+    <title>Movie finder</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../dist/css/ratchet.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="//hm.baidu.com/hm.js?dde6ba2851f3db0ddc415ce0f895822e"></script><script src="../../dist/js/ratchet.min.js"></script>
+  </head>
+  <body rlt="1">
+    <header class="bar bar-nav">
+      <a class="icon icon-gear pull-right" href="#settingsModal"></a>
+      <h1 class="title">Movie finder</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+      <form>
+        <input type="search" placeholder="Search">
+      </form>
     </div>
-  </div>
-  <footer class="footer">footer</footer>
-</body>
-</html>
+
+    <div class="content">
+
+      <div class="slider">
+        <div class="slide-group">
+          <div class="slide">
+            <img src="img/argo.png" alt="Argo" width="640" height="300">
+          </div>
+          <div class="slide">
+             <img src="img/skyfall.png" alt="Skyfall" width="640" height="300">
+          </div>
+          <div class="slide">
+             <img src="img/ralph.png" alt="Wreck-It Ralph" width="640" height="300">
+          </div>
+        </div>
+      </div>
+
+      <ul class="table-view">
+        <li class="table-view-cell table-view-divider">Recommended movies</li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Argo's poster">
+            <div class="media-body">
+              Argo
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Skyfall's poster">
+            <div class="media-body">
+              Skyfall: 007
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Wreck-it Ralph's poster">
+            <div class="media-body">
+              Wreck-it Ralph
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Argo's poster">
+            <div class="media-body">
+              Argo
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Skyfall's poster">
+            <div class="media-body">
+              Skyfall: 007
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Wreck-it Ralph's poster">
+            <div class="media-body">
+              Wreck-it Ralph
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Argo's poster">
+            <div class="media-body">
+              Argo
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Skyfall's poster">
+            <div class="media-body">
+              Skyfall: 007
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right" href="choose-theater.html" data-transition="slide-in">
+            <img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Wreck-it Ralph's poster">
+            <div class="media-body">
+              Wreck-it Ralph
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.content -->
+
+    <!-- Settings modal -->
+    <div id="settingsModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#settingsModal"></a>
+        <h1 class="title">Settings</h1>
+      </header>
+
+      <div class="content">
+        <form class="input-group">
+          <input type="text" placeholder="Full name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Username">
+        </form>
+
+        <h5 class="content-padded">App settings</h5>
+
+        <ul class="table-view">
+          <li class="table-view-cell media">
+            <span class="media-object pull-left icon icon-sound"></span>
+            <div class="media-body">
+              Enable sounds
+            </div>
+            <div class="toggle">
+              <div class="toggle-handle"></div>
+            </div>
+          </li>
+          <li class="table-view-cell media">
+            <span class="media-object pull-left icon icon-person"></span>
+            <div class="media-body">
+              Parental controls
+            </div>
+            <div class="toggle">
+              <div class="toggle-handle"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="content-padded">
+          <button class="btn btn-positive btn-block">Save settings</button>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+  
+
+<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></body></html>

@@ -8,38 +8,40 @@
   <meta name="format-detection"content="telphone=no"/>
   <title>绝对定位布局</title>
   <link rel="stylesheet" href="http://www.w3cplus.com/mcommon/reset.css" media="all">
-.header,.footer,.wrap-page{
-  position:absolute;
-  left:0;
-  right:0;
-}
-.header,.footer{
-  height:44px;
-  background-color: #fff;
-  text-align: center;
-  z-index:900;
-  line-height:44px;
-}
-.header{
-  top: 0;
-  border-bottom: 1px solid #f00;
-}
-.footer{
-  bottom: 0;
-  border-top: 1px solid #f00;
-}
-.wrap-page{
-  top: 44px;
-  bottom: 44px;
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-}
-.page{
-  padding: 10px;
-}
-.page p{
-  margin-bottom: 10px;
-}
+  <style> 
+	.header,.footer,.wrap-page{
+	  position:absolute;
+	  left:0;
+	  right:0;
+	}
+	.header,.footer{
+	  height:44px;
+	  background-color: #fff;
+	  text-align: center;
+	  z-index:900;
+	  line-height:44px;
+	}
+	.header{
+	  top: 0;
+	  border-bottom: 1px solid #f00;
+	}
+	.footer{
+	  bottom: 0;
+	  border-top: 1px solid #f00;
+	}
+	.wrap-page{
+	  top: 44px;
+	  bottom: 44px;
+	  overflow-y:auto;
+	  -webkit-overflow-scrolling:touch;
+	}
+	.page{
+	  padding: 10px;
+	}
+	.page p{
+	  margin-bottom: 10px;
+	}
+    </style>
 </head>
 <body>
   <header class="header">header</header>

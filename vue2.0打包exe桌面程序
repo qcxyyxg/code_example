@@ -1,0 +1,8 @@
+vue add electron-builder或者
+利用vue admin elmentui 的electron项目
+修改app页面为
+<div id="app">
+		<!-- <webview id="foo" src="http://localhost:8080/?sss=8" nodeintegration></webview> -->
+		<!-- <webview id="foo" src="http://localhost:9000/login" nodeintegration></webview> -->
+		<webview id="foo" src="http://www.aizhixin.com/login" allowpopups nodeintegration></webview>
+	</div>
